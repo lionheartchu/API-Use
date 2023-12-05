@@ -1,19 +1,42 @@
 @keyframes glow{
-    0% {
+    0%{
         box-shadow: 0 0 5vw rgba(255, 255, 255, 0.8);
     }
-    50% {
+    50%{
         box-shadow: 0 0 1.5vw rgba(255, 255, 255, 0.8);
     }
-    100% {
+    100%{
         box-shadow: 0 0 5vw rgba(255, 255, 255, 0.8);
     }
+}
+@keyframes swim {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(8%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes water-move {
+    0%{
+        height: 90%;
+    }
+    50%{
+        height: 92%;
+    }
+    100%{
+        height: 90%;
+    }   
 }
 
 body{
     font-family: 'Pixelify Sans', sans-serif;
     margin:1.5%;
     font-size: 1.5vw;
+    background: ghostwhite;
 }
 .lid{
     width: 71%;
@@ -21,9 +44,9 @@ body{
     background-color: black;
     position:relative;
     top: 30%;
-    
     margin-bottom: -7%;
     left: 50%;
+    border-radius: 0.3vw;
     transform: translateX(-50%);
 }
 .fish-tank {
@@ -45,9 +68,8 @@ body{
     bottom:1%;
     left:1%;
     border-radius: 0 0 0.8vw 0.8vw;
-
     z-index: 1;
-    animation: reflection 2s infinite linear;
+    animation: reflection 2s infinite linear,water-move 8s infinite ease;
 }
 
 @keyframes reflection {
@@ -65,7 +87,8 @@ body{
 /* fishes */
 .fish{
     opacity:0.4;
-    transition:opacity 2s;
+    transition:opacity 1.5s 0.5s, width 2s;
+    animation: swim 4s infinite linear;
 }
 .shrimp{
     width:4vw;
@@ -113,6 +136,46 @@ body{
     width:20vw;
     margin-left:68%;
     margin-top: -7%;
+}
+
+.info{
+    position:absolute;
+    font-size:1.1vw;
+    z-index: 2;
+    transition: opacity 1s;
+    opacity:0;
+}
+.info1{
+    top:74%;
+    left:22%;
+}
+.info3{
+    top:77%;
+    left:30%;
+}
+.info2{
+    top:50%;
+    left:20%;
+}
+.info4{
+    top:27%;
+    left:27%;
+}
+.info5{
+    top:37%;
+    left:54%;
+}
+.info6{
+    top:59%;
+    left:43%;
+}
+.info7{
+    top:50%;
+    left:61%;
+}
+.info8{
+    top:79%;
+    left:59%;
 }
 
 #size-input{
