@@ -1,0 +1,135 @@
+@keyframes glow{
+    0% {
+        box-shadow: 0 0 5vw rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 1.5vw rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 5vw rgba(255, 255, 255, 0.8);
+    }
+}
+
+body{
+    font-family: 'Pixelify Sans', sans-serif;
+    margin:1.5%;
+    font-size: 1.5vw;
+}
+.lid{
+    width: 71%;
+    height: 4vh;
+    background-color: black;
+    position:relative;
+    top: 30%;
+    
+    margin-bottom: -7%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.fish-tank {
+    width: 70%;
+    height: 70vh;
+    background-color: rgba(173, 216, 230,0.3);
+    margin:7% auto;
+    position: relative;
+    border-radius: 0 0 1vw 1vw;
+    box-shadow: 0 0 1.5vw rgba(255, 255, 255, 0.8);
+    animation:glow 3s ease-in-out infinite;
+}
+.water{
+    width: 98%;
+    height: 90%;
+    background: #87CEEB;
+    opacity:0.8;
+    position: absolute;
+    bottom:1%;
+    left:1%;
+    border-radius: 0 0 0.8vw 0.8vw;
+
+    z-index: 1;
+    animation: reflection 2s infinite linear;
+}
+
+@keyframes reflection {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+/* fishes */
+.fish{
+    opacity:0.4;
+    transition:opacity 2s;
+}
+.shrimp{
+    width:4vw;
+    margin-top:30%;
+    margin-bottom:-30%;
+    margin-left:1%;
+}
+.snail{
+    width:12vw;
+    margin-top:40%;
+    margin-bottom:-40%;
+    margin-left:-2%;
+}
+.betta{
+    width:7vw;
+    left:10%;
+    margin-top:20%;
+    margin-bottom:-15%;
+    margin-left:-8%;
+}
+.fancy{
+    width:10vw;
+    left:15%;
+    margin-bottom:5%;
+}
+.comet{
+    width:12vw;
+    left:20%;
+    margin-bottom:-4%;
+    margin-left:-3%;
+}
+.danio{
+    width:15vw;
+    left:30%;
+    margin-bottom:-28%;
+    margin-left:-15%;
+}
+.angel{
+    width:17vw;
+    margin-left:70%;
+    margin-top:-5%;
+    margin-bottom:5%;
+}
+.koi{
+    width:20vw;
+    margin-left:68%;
+    margin-top: -7%;
+}
+
+#size-input{
+    height:1.5vw;
+    margin:0.25%;
+    font-family: 'Roboto';
+}
+.btnCheck{
+    background-color: rgb(230,230,230);
+    padding:0.5% 1.25%;
+    border-radius: 0.5vw;
+    border:none;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size:1.3vw;
+    transition:background-color 0.8s, color 0.8s;
+}
+.btnCheck:hover{
+    background-color: silver;
+    color:white;
+}
